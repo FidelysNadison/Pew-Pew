@@ -21,7 +21,7 @@ canvas {
   display: inline-block;
   position: relative;
   width: 900px;
-  height: 900px;
+  height: 1000px;
   top: 20;
   left: 0;
   z-index: -1;

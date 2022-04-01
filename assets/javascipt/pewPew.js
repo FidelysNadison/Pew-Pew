@@ -10,8 +10,8 @@ var canvas = document.querySelector("#make"),
     pressedKeys = [],
     li,
     score = 0,
-    fireaudio = new Audio('https://raw.githubusercontent.com/AlimasKuvo/spaceinvader/gh-pages/blop.mp3'),
-    invaderaudio = new Audio('https://raw.githubusercontent.com/AlimasKuvo/spaceinvader/gh-pages/foosh.mp3'),
+    fireaudio = new Audio,
+    invaderaudio = new Audio,
     shiphit = false;
 // Get Random //
 function rand(min, max) {
@@ -27,7 +27,7 @@ function Invader(x, y) {
     this.clash = false;
     // Show Invader //
     this.showpi = function () {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'red';
         ctx.fillRect(x, y, 40, 40);
     };
     // Move Invader //
@@ -45,10 +45,9 @@ function Ship(x, y) {
     var movmentspeed = 0.8;
     // Show Ship //
     this.showpi = function () {
-        // Shade Of Red //
-        ctx.fillStyle = '#f44242';
+         // Shade Of Blue //
+        ctx.fillStyle = '#5563fc';
         ctx.fillRect(x - 30, y, 80, 20);
-        // Shade Of Blue //
         ctx.fillStyle = '#5563fc';
         ctx.fillRect(x, y - 30, 20, 50);
     };
@@ -127,7 +126,7 @@ function Bullet(x, y) {
 function setCanvasWidth() {
     "use strict";
     ctx.canvas.width = 800;
-    ctx.canvas.height = 700;
+    ctx.canvas.height = 1000;
 }
 // Paint Over Canvas For Animation Illusion //
 function paintover() {
